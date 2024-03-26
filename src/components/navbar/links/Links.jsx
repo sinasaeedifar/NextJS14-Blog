@@ -24,25 +24,26 @@ const Links = () => {
     //TEMPORARY
     const isAdmin = true;
     const session = true;
-    return <div className={styles.container}>
-        <div className={styles.links}>
-            {links.map((link => <NavLink item={link} key={link.title}/>))}
-            {session ? (
-                <>
-                    {isAdmin && <NavLink item={{title: "Admin", path: "/admin"}}/>}
-                    <button className={styles.logout}>Logout</button>
-                </>) : (
-                <NavLink item={{title: "Login", path: "/login"}}/>
-            )}
+    return (
+        <div className={styles.container}>
+            <div className={styles.links}>
+                {links.map((link => <NavLink item={link} key={link.title}/>))}
+                {session ? (
+                    <>
+                        {isAdmin && <NavLink item={{title: "Admin", path: "/admin"}}/>}
+                        <button className={styles.logout}>Logout</button>
+                    </>) : (
+                    <NavLink item={{title: "Login", path: "/login"}}/>
+                )}
+            </div>
+            <button onClick={() => setOpen((prev) => !prev)}>Menu</button>
+            {open && (<div className={styles.mobileLinks}>
+                {links.map((link) => {
+                    return <NavLink item={link} key={link.title} />
+                })}
+            </div>)}
         </div>
-        <button onClick={() => setOpen((prev) => !prev)}>Menu</button>
-        {open && (<div className={styles.mobileLinks}>
-            {links.map((link) => {
-                <NavLink item={link} key={link.title} } />
-            ))
-            }
+    )
+}
 
-                </div>)}
-        </div>)
-        }
 export default Links;
