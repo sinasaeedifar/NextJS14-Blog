@@ -1,5 +1,52 @@
-.ImgContainer {
-    position: relative;
-    width: 100%;
-    height: 500px;
+.imgContainer {
+    flex: 1;
+    position: absolute;
+    height: 440px;
+    width: 440px;
+}
+
+.container {
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+}
+
+.textContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box h1 {
+    color: var(--btn)
+}
+
+.title {
+    font-size: 54px
+}
+
+.subtitle {
+    color: var(--btn);
+}
+
+.desc {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.img {
+    /*object-fit: contain;*/
 }
