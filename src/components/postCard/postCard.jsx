@@ -6,7 +6,7 @@ const PostCard = () => {
     return <div className={styles.container}>
         <div className={styles.top}>
             <div className={styles.imgContainer}>
-            <Image className={styles.img} src={"/hero.png"} alt={""} fill/>
+                <Image className={styles.img} src={"/hero.png"} alt={""} fill/>
             </div>
             <span className={styles.date}>01.01.2025</span>
         </div>
@@ -15,9 +15,11 @@ const PostCard = () => {
                 Title
             </h1>
             <p className={styles.desc}>
-                Desk
+                lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+                ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+                ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
             </p>
-            <Link href={"/blog/post"}>Read More</Link>
+            <Link className={styles.link} href={"/blog/post"}>Read More</Link>
         </div>
     </div>
 }
