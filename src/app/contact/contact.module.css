@@ -43,3 +43,11 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .container{
+        max-width: 640px;
+        flex-direction: column;
+    }
+    
+}

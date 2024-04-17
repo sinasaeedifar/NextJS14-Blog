@@ -2,7 +2,9 @@ import styles from "./contact.module.css"
 import Image from "next/image";
 
 const ContactPage = () => {
-    return <div className={styles.container}>
+const a =Math.random();
+console.log(a)
+return <div className={styles.container}>
         <div className={styles.imgContainer}>
             <Image className={styles.img} src={"/contact.png"} alt={""} fill/>
         </div>
