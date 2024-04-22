@@ -1,7 +1,10 @@
 import styles from "./singlePost.module.css"
 import Image from "next/image";
 
-const SinglePostPage = () => {
+const SinglePostPage = ({params,searchParams}) => {
+    console.log("khodaneghadar",searchParams)
+    console.log("slug",params)
+
     return <div className={styles.container}>
         <div className={styles.imgContainer}>
             <Image className={styles.img} src={"/hero.png"} alt={""} fill/>

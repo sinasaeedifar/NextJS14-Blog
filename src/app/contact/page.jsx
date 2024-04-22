@@ -1,14 +1,18 @@
+// "use client"
 import styles from "./contact.module.css"
 import Image from "next/image";
-
+import dynamic from "next/dynamic";
+// import HydrationTest from "@/components/HydrationTest";
+// const HydrationTest = dynamic(() => import('@/components/HydrationTest'), { ssr: false });
 const ContactPage = () => {
-const a =Math.random();
-console.log(a)
-return <div className={styles.container}>
+    // let a = Math.random()
+    // console.log("getting route",a)
+    return <div className={styles.container}>
         <div className={styles.imgContainer}>
             <Image className={styles.img} src={"/contact.png"} alt={""} fill/>
         </div>
         <div className={styles.formContainer}>
+           {/*<div suppressHydrationWarning>{a}</div>*/}
             <form className={styles.form}>
                 <input type={"text"} placeholder={"Name and Surname"}/>
                 <input type={"email"} placeholder={"Email Address"}/>
