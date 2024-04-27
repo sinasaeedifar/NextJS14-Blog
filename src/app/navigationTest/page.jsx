@@ -7,7 +7,7 @@ const NavigationTestPage = props => {
     const pathName  = usePathname();
     const searchParams = useSearchParams();
     const router = useRouter();
-    const q = searchParams.get("q")
+    const q = searchParams.get("price")
     const handleClick = () => {
         console.log("clicked");
         router.forward()
